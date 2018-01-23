@@ -34,9 +34,10 @@ public class CursorAdapterProductos extends CursorAdapter {
         precio = (TextView)view.findViewById(R.id.precio);
         cantidad = (TextView)view.findViewById(R.id.cantidad);
 
-        nombre.setText(cursor.getString(1));
-        marca.setText(cursor.getString(3));
-        precio.setText( "$ " + Float.toString(cursor.getFloat(4)));
-        cantidad.setText(Float.toString(cursor.getFloat(5)));
+        nombre.setText(cursor.getString(cursor.getColumnIndex("nombre_producto")));
+        marca.setText(cursor.getString(cursor.getColumnIndex("marca_producto")));
+        precio.setText( "$ " + Float.toString(cursor.getFloat(
+                cursor.getColumnIndex("precio_producto"))));
+        cantidad.setText(Float.toString(cursor.getFloat(cursor.getColumnIndex("cantidad_producto"))));
     }
 }

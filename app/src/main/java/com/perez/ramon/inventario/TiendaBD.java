@@ -22,9 +22,9 @@ public class TiendaBD extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table productos (" +
-                "id_producto integer primary key autoincrement, " +
+                "_id integer primary key autoincrement, " +
                  "nombre_producto text, marca_producto text, " +
-                "precio_producto float, cantidad float)");
+                "precio_producto float, cantidad_producto float)");
     }
 
     @Override

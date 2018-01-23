@@ -29,7 +29,7 @@ public class Productos {
         db.close();
     }
 
-    public List obtenerTodosLosProductos(){
+    /*public List obtenerTodosLosProductos(){
         List<Producto> productos = new ArrayList<>();
         SQLiteDatabase db = tiendaBD.getReadableDatabase();
         Cursor cursor = db.rawQuery("select * from productos order by nombre_producto",null);
@@ -46,5 +46,10 @@ public class Productos {
         }
 
         return productos;
+    }*/
+
+    public static Cursor obtenerTodosLosProductos(){
+        SQLiteDatabase bd = tiendaBD.getReadableDatabase();
+        return bd.rawQuery("select * from productos",null);
     }
 }

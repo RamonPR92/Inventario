@@ -3,6 +3,7 @@ package com.perez.ramon.inventario;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ public class Productos {
         tiendaBD = new TiendaBD(context);
     }
 
-    public void guardarProducto(Producto producto){
+    public static void guardarProducto(Producto producto){
         SQLiteDatabase db = tiendaBD.getWritableDatabase();
         db.execSQL("insert into productos values (null, " +
                 " '" +  producto.getNombre() + "' , " +

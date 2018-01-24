@@ -38,6 +38,6 @@ public class CursorAdapterProductos extends CursorAdapter {
         marca.setText(cursor.getString(cursor.getColumnIndex("marca_producto")));
         precio.setText( "$ " + Float.toString(cursor.getFloat(
                 cursor.getColumnIndex("precio_producto"))));
-        cantidad.setText(Float.toString(cursor.getFloat(cursor.getColumnIndex("cantidad_producto"))));
+        cantidad.setText("Cantidad " + Float.toString(cursor.getFloat(cursor.getColumnIndex("cantidad_producto"))));
     }
 }

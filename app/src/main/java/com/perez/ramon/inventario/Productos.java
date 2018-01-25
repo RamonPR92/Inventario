@@ -30,6 +30,12 @@ public class Productos {
         db.close();
     }
 
+    public static  void eliminarProducto(long id){
+        SQLiteDatabase db = tiendaBD.getWritableDatabase();
+        db.execSQL("delete from productos where _id = " + id);
+        db.close();
+    }
+
     /*public List obtenerTodosLosProductos(){
         List<Producto> productos = new ArrayList<>();
         SQLiteDatabase db = tiendaBD.getReadableDatabase();
